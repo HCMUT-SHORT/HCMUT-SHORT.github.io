@@ -101,19 +101,30 @@
     </section>
 
     <!-- ROADMAP -->
-    <section class="section card">
-      <h3>Lộ trình</h3>
+  <section class="section card">
+
+      <h3>Lộ trình (đến 31/12/2025)</h3>
+
       <table>
-        <thead><tr><th>Thời gian</th><th>Hạng mục</th><th>Kết quả</th></tr></thead>
-        <tbody data-slot="roadmap.rows"></tbody>
+
+        <tr><th>Thời gian</th><th>Hạng mục</th><th>Kết quả</th></tr>
+
+        <tr><td>09/2025 - 10/2025</td><td>Research</td><td>Market research, customer insight, business canvas</td></tr>
+
+        <tr><td>11/2025 - 12/2025</td><td>Project Showcase</td><td>Figma, Behance, Github Page</td></tr>
+
+        <tr><td>12/2025 - 01/2026</td><td>Phát triển MVP</td><td>APK</td></tr>
+
       </table>
+
     </section>
+
 
     <!-- LINKS / CONTACT -->
     <section id="download" class="section grid cols-2">
       <div class="card">
         <h3>Liên kết quan trọng</h3>
-        <ul data-slot="links.items"></ul>
+        <ul class="link-a" data-slot="links.items"></ul>
       </div>
       <div id="contact" class="card">
         <h3>Liên hệ</h3>
@@ -131,7 +142,7 @@
   <script id="config" type="application/json">
   {
     "meta": { "title": "AI TRAVEL — Showcase" },
-    "brand": { "name": "AI TRAVEL", "logo": "assets/logo.png" },
+    "brand": { "name": "AI TRAVEL", "logo": "assets/background.jpg" },
     "nav": {
       "buttons": [
         {"label": "Tính năng", "href": "#features"},
@@ -143,69 +154,60 @@
       "badges": ["React Native","Gemini AI"],
       "title": "Ải gì khó có AI Travel lo",
       "lead": "Ứng dụng nhằm giúp người dùng giải quyết những vấn đề thường gặp trong việc lên kế hoạch du lịch tự túc",
-      "kpis": ["🎯 Mục tiêu: MVP 01/2026", "📈 MAU mục tiêu: 500", "✅ Match rate ≥ 60%"],
+      "kpis": ["🎯 Mục tiêu: MVP 01/2026", "📈 MAU mục tiêu: 50"],
       "cta": [
         {"label":"Tải APK (demo)","href":"#download","variant":"primary"},
         {"label":"Liên hệ nhóm","href":"#contact"}
       ],
-      "image": "assets/hero.png"
+      "image": "assets/mockup.png"
     },
-    "problem": { "items": ["Vấn đề 1","Vấn đề 2","Vấn đề 3"] },
-    "solution": { "items": ["Giải pháp 1","Giải pháp 2","Giải pháp 3"] },
-    "value": { "items": ["Giá trị 1","Giá trị 2","Giá trị 3"] },
-    "advantage": { "items": ["Lợi thế 1","Lợi thế 2","Lợi thế 3"] },
-    "customer": { "items": ["Phân khúc 1","Phân khúc 2","Phân khúc 3"] },
+    "problem": { "items": ["Người dùng có nhu cầu đi du lịch tự túc nhưng gặp khó khăn trong việc lên kế hoạch, sắp xếp lịch trình và quản lý chi phí"] },
+    "solution": { "items": ["Ứng dụng cung cấp giải pháp giúp người dùng lên kế hoạch du lịch được cá nhân hoá, quản lý chi phí và tham khảo review"] },
+    "value": { "items": ["Giúp người dùng tiết kiệm thời gian tạo lịch trình du lịch, tham khảo các địa điểm tham quan"] },
+    "advantage": { "items": ["Thông tin về lịch trình được tổng hợp trên một ứng dụng.","Đề xuất địa điểm cá nhân hoá theo sở thích, mong muốn của người dùng.","Hỗ trợ quản lý chi phí tự động.","Tích hợp google review"] },
+    "customer": { "items": ["Người trẻ (18-30 tuổi) có mong muốn đi du lịch tự túc nhưng không biết lên kế hoạch hợp lí"] },
     "metrics": {
       "rows": [
-        ["MAU (30D)","≥ 500 sau 6 tháng"],
-        ["Match rate","≥ 60%"],
-        ["Giao dịch hoàn tất","≥ 100/tháng"],
-        ["Retention","≥ 40%/tháng"],
-        ["Hài lòng người dùng","≥ 4.0/5.0"]
+        ["Khoảng thời gian trung bình trong một phiên sử dụng (session length)","20–30 phút"],
+        ["Tỉ lệ hoàn tất lịch trình (chức năng tạo tour)","> 90%"],
+        ["Tỉ lệ lỗi trong suốt quá trình tạo tour","≤ 5%"],
+        ["Mức độ hài lòng với các review","> 80%"]
       ]
     },
     "features": {
       "columns": [
-        {"title":"Đăng & quản lý bài","bullets":["Tải ảnh, mô tả, giá, tình trạng","Địa điểm & geohash để tìm gần bạn"]},
-        {"title":"Tìm kiếm & Lọc","bullets":["Danh mục, khoảng cách, khoảng giá","Ưu tiên kết quả gần vị trí hiện tại"]},
-        {"title":"Chat & Uy tín","bullets":["Chat 1–1, thông báo đẩy","Đánh dấu đã bán, đánh giá người dùng"]}
+        {"title":"Tạo tour","bullets":["Người dùng tạo một chuyến đi du lịch cá nhân hóa bằng cách nhập các thông tin cơ bản như điểm đến, ngày đi-về, ngân sách hoặc sở thích.","Ứng dụng sẽ sử dụng AI để đề xuất các địa điểm tham quan phù hợp với người dùng."]},
+        {"title":"Xem lịch sử","bullets":["Cho phép người dùng truy cập lại các tour đã tạo trước đây,bao gồm lịch trình, chi phí, và các ghi chú.","Cho phép người dùng chỉnh sửa hoặc tái sử dụng cho những chuyến đi tương tự trong tương lai."]},
+        {"title":"Chia sẻ tour","bullets":["Cho phép người dùng chia sẻ lịch trình gồm các địa điểm đã chọn cho người khác qua mã","Hỗ trợ quyền chỉnh sửa chung, giúp người được chia sẻ có thể cùng cập nhật và hoàn thiện tour."]}
       ]
     },
     "screenshots": {
       "items": [
-        {"src":"assets/Welcome.png","alt":"Welcome"},
-        {"src":"assets/SignIn.png","alt":"Sign in"},
-        {"src":"assets/Home.png","alt":"Home"},
-        {"src":"assets/Chat.png","alt":"Chat"}
+        {"src":"assets/Onboarding-start.png","alt":"Welcome"},
+        {"src":"assets/Onboarding-1.png","alt":"Sign in"},
+        {"src":"assets/Onboarding-2.png","alt":"Home"},
+        {"src":"assets/Onboarding-3.png","alt":"Chat"}
       ]
     },
-    "tech": { "items": ["Flutter / React Native (mobile)","Firebase Auth, Firestore, Storage, FCM","Google Maps SDK, Geohash","Analytics: GA4 + BigQuery"] },
+    "tech": { "items": ["React Native (mobile)","Supabase","Gemini AI"] },
     "team": {
       "members": [
-        {"name":"Họ Tên A","role":"Leader / Backend"},
-        {"name":"Họ Tên B","role":"Mobile"},
-        {"name":"Họ Tên C","role":"UI/UX & Testing"},
-        {"name":"Họ Tên D","role":"Data & Analytics"}
-      ]
-    },
-    "roadmap": {
-      "rows": [
-        ["09/2025","Khảo sát & Canvas","Báo cáo khảo sát, KPI"],
-        ["10/2025","Thiết kế & Kiến trúc","Figma + ERD"],
-        ["10-11/2025","Phát triển MVP","Auth, Đăng bài, Tìm kiếm, Chat"],
-        ["11/2025","Tạo Showcase","GitHub Pages"]
+        {"name":"Đoàn Lê Vy","role":"Leader & UI/UX"},
+        {"name":"Huỳnh Ngọc Nhơn","role":"Backend & Tech Lead"},
+        {"name":"Đỗ Mỹ Quyên","role":"Backend"},
+        {"name":"Phó Ngọc Song Khuê","role":"Frontend & Testing"}
       ]
     },
     "links": {
       "items": [
-        {"label":"GitHub repo","href":"https://github.com/your-org/your-repo"},
-        {"label":"GitHub Organization","href":"https://github.com/your-org"},
+        {"label":"GitHub repo","href":"https://github.com/HCMUT-SHORT/master"},
+        {"label":"GitHub Organization","href":"https://github.com/HCMUT-SHORT"},
         {"label":"APK demo","href":"#", "note":"WORK IN PROGRESS"}
       ]
     },
     "contact": {
-      "primary": "Email: <a href='mailto:you@example.com'>you@example.com</a> — hoặc tạo Issue trên GitHub.",
-      "footerNote": "© Nhóm {group} — Môn/khóa học của bạn."
+      "primary": "Email: <a href='mailto:doanlevy2806@gmail.com'>doanlevy2806@gmail.com</a> — hoặc tạo Issue trên GitHub.",
+      "footerNote": "© Nhóm {group} — Mobile App."
     }
   }
   </script>
