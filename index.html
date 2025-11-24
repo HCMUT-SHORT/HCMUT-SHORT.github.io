@@ -1,348 +1,244 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-slot="meta.title">Project — Showcase</title>
-  <meta name="description" content="One‑page showcase template cho các nhóm sinh viên. Điền cấu hình trong thẻ <script id='config'> phía dưới hoặc thay bằng file JSON của bạn.">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Travel</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-  <!-- ======= NAVBAR ======= -->
-  <header class="nav">
-    <div class="nav__wrap">
-      <div class="brand">
-        <div class="logo" aria-hidden="true" data-slot="brand.logo"></div>
-        <h1 data-slot="brand.name">ProjectName</h1>
+<body class="w-full">
+  <header class="max-w-screen-xl mx-auto mb-8">
+    <nav class="px-4 sm:px-5 py-12 flex items-center justify-between space-x-12">
+      <div class="flex items-center space-x-8">
+        <div id="logo" class="flex items-center space-x-2">          
+          <h5 class="text-xl font-bold text-[var(--green)]">AI Travel</h5>
+        </div>
       </div>
-      <div class="cta" data-slot="nav.cta">
-        <!-- Filled by config: buttons to #features, #screens, repo, etc. -->
+      <div class="lg:hidden">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
       </div>
-    </div>
+      <div class="hidden lg:flex items-center space-x-5">        
+        <a href="#ui" class="text-[var(--darkyellow)] font-bold hover:text-[var(--green)] transition duration-300">UI</a>
+        <a href="#mvp" class="text-[var(--darkyellow)] font-bold hover:text-[var(--green)] transition duration-300">MVP</a>
+        <a href="https://github.com/HCMUT-SHORT" class="text-[var(--darkyellow)] font-bold hover:text-[var(--green)] transition duration-300">Github</a>
+      </div>
+    </nav>
   </header>
-
-  <!-- ======= MAIN ======= -->
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="card">
-        <div class="badges" data-slot="hero.badges"></div>
-        <h2 data-slot="hero.title">Tiêu đề dự án</h2>
-        <p class="lead" data-slot="hero.lead">Mô tả ngắn gọn về sản phẩm: tập trung vào giá trị và đối tượng.</p>
-        <div class="kpi" data-slot="hero.kpis"></div>
-        <div class="foot" data-slot="hero.cta"></div>
+  <main class="max-w-screen-xl mx-auto overflow-x-hidden px-4 sm:px-5">
+    <!-- Hero Section -->
+    <section data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-6 lg:grid-cols-12 mb-10">
+      <div class="col-span-6 text-center lg:text-justify">
+        <span class="inline-block px-3 py-1.5 mb-4 bg-[var(--mint)] bg-opacity-10 text-[var(--green)] font-semibold tracking-wide rounded-full">Ải gì khó có AI Travel lo!</span>
+        <h1 class="text-5xl sm:text-3xl md:text-4xl mb-4 font-extrabold text-[var(--darkblue)] leading-tight">Thích du lịch tự túc nhưng ngại lên kế hoạch? <br><span class="text-[var(--green)]">Không biết quản lý chi phí, không chắc đâu là điểm đến “xịn”?</span> </h1>
       </div>
-      <div class="media">
-        <img src="" alt="App mockup" style="width:100%;border-radius:14px;box-shadow:var(--shadow);" data-slot="hero.image">
+      <div class="col-span-6 pl-24 hidden lg:block">
+        <img src="assets/Shot.png" alt="">
       </div>
     </section>
-
-    <!-- PROBLEM / SOLUTION / VALUE -->
-    <section class="section grid cols-3">
-      <div class="card">
-        <h3>Problem</h3>
-        <ul data-slot="problem.items"></ul>
+        <!-- Booking Hotel Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 pt-12 pb-8 lg:pb-36">
+      <div data-aos="fade-right" data-aos-duration="700" class="relative">
+        <img src="assets/4phones.png" class="relative lg:absolute top-0 lg: -left-32 md:-left-16 lg:-left-40 xl:-left-12 min-w-[620px]" alt="">
       </div>
-      <div class="card">
-        <h3>Solution</h3>
-        <ul data-slot="solution.items"></ul>
-      </div>
-      <div class="card">
-        <h3>Value</h3>
-        <ul data-slot="value.items"></ul>
-      </div>
-    </section>
-
-    <!-- ADVANTAGE / CUSTOMER / METRICS -->
-    <section class="section grid cols-3">
-      <div class="card">
-        <h3>Advantage</h3>
-        <ul data-slot="advantage.items"></ul>
-      </div>
-      <div class="card">
-        <h3>Customer / User</h3>
-        <ul data-slot="customer.items"></ul>
-      </div>
-      <div class="card">
-        <h3>Metrics (KPI)</h3>
-        <table>
-          <thead><tr><th>Chỉ số</th><th>Mục tiêu</th></tr></thead>
-          <tbody data-slot="metrics.rows"></tbody>
-        </table>
+      <div data-aos="fade-left" data-aos-duration="700" class="py-10 px-9 text-center bg-[var(--mint)] rounded-r-2xl lg:text-left">
+        <!-- <span class="mb-4 text-[#3DA9FC] inline-block font-semibold leading-tight">Booking Penginapan</span> -->
+        <h2 class="mb-4 text-3xl md:text-4xl text-[var(--darkblue)] font-extrabold leading-tight pr-0">Đừng lo, việc gì khó đã có AI Travel lo! 👍🏻</h2>
+        <p class="mb-8 text-base md:text-lg tracking-wide leading-8 font-semibold text-black pr-0 xl:pr-24">
+            AI tạo lịch trình tự động <br>
+            Tổng hợp review đáng tin cậy <br>
+            Công cụ quản lý chi phí thông minh <br>
+            Kho thông tin du lịch tập trung <br>
+            Giao diện tối giản - thao tác nhanh <br>
+            Chia sẻ tour dễ dàng
+        </p>
       </div>
     </section>
-
-    <!-- FEATURES -->
-    <section id="features" class="section card">
-      <h3>Tính năng chính (MVP)</h3>
-      <div class="grid cols-3" data-slot="features.columns"></div>
-    </section>
-
-    <!-- SCREENS -->
-    <section id="screens" class="section">
-      <div class="card">
-        <h3>Ảnh màn hình</h3>
-        <div style="max-width: 1000px; margin: 0 auto">
-          <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:16px" data-slot="screenshots.grid"></div>
+    <!-- Favorite Section -->
+    <section id="ui" data-aos="zoom-in" data-aos-duration="1000" class="py-2 mb-16 text-center lg:text-left">
+      <span class="text-[var(--lightgreen)] inline-block font-semibold leading-tight mb-4">Khám phá</span>
+      <div class="flex items-center justify-between mb-8 lg:mb-5">
+        <h3 class="text-4xl text-[var(--green)] font-extrabold leading-tight w-full lg:w-fit">Giao diện ứng dụng</h3>
+      </div>
+      <div class="grid grid-cols-4 lg:grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-12 mb-8">
+        <div class="col-span-4 flex flex-col items-center justify-center rounded-xl hover:scale-105 transition duration-300 cursor-pointer">
+          <img src="assets/home-portrait.png" class="h-[100%] aspect-video lg:aspect-auto object-cover object-center mb-4 rounded-xl" alt="">
+          <h5 class="text-xl text-[var(--green)] font-bold mb-3.5">Trang chủ</h5>
+        </div>
+        <div class="col-span-4 flex flex-col items-center justify-center rounded-xl hover:scale-105 transition duration-300 cursor-pointer">
+          <img src="assets/tour-portrait.png" class="h-[100%] aspect-video lg:aspect-auto object-cover object-center mb-4 rounded-xl" alt="">
+          <h5 class="text-xl text-[var(--green)] font-bold mb-3.5">Thông tin tour</h5>
+        </div>
+        <div class="col-span-4 flex flex-col items-center justify-center rounded-xl hover:scale-105 transition duration-300 cursor-pointer">
+          <img src="assets/mytour-portrait.png" class="h-[100%] aspect-video lg:aspect-auto object-cover object-center mb-4 rounded-xl" alt="">
+          <h5 class="text-xl text-[var(--green)] font-bold mb-3.5">Lịch sử</h5>
         </div>
       </div>
     </section>
 
-    <!-- TECH / TEAM -->
-    <section class="section grid cols-2">
-      <div class="card">
-        <h3>Công nghệ</h3>
-        <ul data-slot="tech.items"></ul>
-      </div>
-      <div class="card">
-        <h3>Nhóm</h3>
-        <ul data-slot="team.members"></ul>
+    <!-- Testimonial Section -->
+    <section id="mvp" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700" class="relative w-[95%] mx-auto min-h-[742px] py-10 flex flex-col items-center bg-[var(--mint)] bg-opacity-75 rounded-xl mb-14">
+      <span class="mb-4 text-[var(--blue)] inline-block font-semibold leading-tight">MVP</span>
+      <h2 class="mb-4 text-4xl md:text-5xl text-[var(--green)] font-extrabold leading-tight text-center lg:text-left pb-10">Tính năng chính</h2>
+      <div class="relative w-full">
+        <div class="absolute top-0 left-[-3%] w-[106%]">
+          <div class="swiper comment-slider px-5 h-[340px] !overflow-visible">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide w-full max-h-[240px] md:max-h-[300px] xl:max-h-[460px] p-5 sm:px-8 sm:py-5 md:p-5 xl:p-5 rounded-xl shadow-lg bg-white flex flex-col items-center">
+                <div class="flex items-center space-x-4">
+                  <div class="flex flex-col justify-between">
+                    <h6 class="px-3 py-1.5 mb-1 tracking-wide rounded-full bg-[var(--lightblue)] bg-opacity-10 text-[var(--darkblue)] text-center font-medium">Tạo tour</h6>
+                  </div>
+                </div>
+                <p class="text-sm sm:text-lg md:text-sm xl:text-base text-[#5F6C7B] leading-relaxed">Cho phép người dùng tạo một chuyến đi du lịch cá nhân hóa bằng cách nhập các thông tin cơ bản như điểm đến, ngày đi-về, ngân sách hoặc sở thích. Sau đó, ứng dụng sẽ sử dụng AI để đề xuất các địa điểm tham quan phù hợp với người dùng.</p>
+              </div>
+              <div class="swiper-slide w-full max-h-[240px] md:max-h-[300px] xl:max-h-[460px] p-5 sm:px-8 sm:py-5 md:p-5 xl:p-5 rounded-xl shadow-lg bg-white flex flex-col items-center">
+                <div class="flex items-center space-x-4">
+                  <div class="flex flex-col justify-between">
+                    <h6 class="px-3 py-1.5 mb-1 tracking-wide rounded-full bg-[var(--lightblue)] bg-opacity-10 text-[var(--darkblue)] text-center font-medium">Xem lịch sử tạo tour</h6>
+                  </div>
+                </div>
+                <p class="text-sm sm:text-lg md:text-sm xl:text-base text-[#5F6C7B] leading-relaxed">Cho phép người dùng truy cập lại các tour đã tạo trước đây, bao gồm lịch trình, chi phí. <br> Cho phép người dùng chỉnh sửa cho những chuyến đi tương tự trong tương lai. </p>
+              </div>
+              <div class="swiper-slide w-full max-h-[240px] md:max-h-[300px] xl:max-h-[460px] p-5 sm:px-8 sm:py-5 md:p-5 xl:p-5 rounded-xl shadow-lg bg-white flex flex-col items-center">
+                <div class="flex items-center space-x-4">
+                  <div class="flex flex-col justify-between">
+                    <h6 class="px-3 py-1.5 mb-1 tracking-wide rounded-full bg-[var(--lightblue)] bg-opacity-10 text-[var(--darkblue)] text-center font-medium">Chia sẻ tour</h6>                    
+                  </div>
+                </div>
+                <p class="text-sm sm:text-lg md:text-sm xl:text-base text-[#5F6C7B] leading-relaxed">Cho phép người dùng chia sẻ lịch trình gồm các địa điểm đã chọn cho người khác qua mã (người được chia sẻ cần có ứng dụng). Người dùng được chia sẻ có thể cùng chỉnh sửa, cập nhật và hoàn thiện tour.</p>
+              </div>
+              <div class="swiper-slide w-full max-h-[240px] md:max-h-[300px] xl:max-h-[460px] p-5 sm:px-8 sm:py-5 md:p-5 xl:p-5 rounded-xl shadow-lg bg-white flex flex-col items-center">
+                <div class="flex items-center space-x-4">
+                  <div class="flex flex-col justify-between">
+                    <h6 class="px-3 py-1.5 mb-1 tracking-wide rounded-full bg-[var(--lightblue)] bg-opacity-10 text-[var(--darkblue)] text-center font-medium">Đăng nhập/Đăng ký</h6>                    
+                  </div>
+                </div>
+                <p class="text-sm sm:text-lg md:text-sm xl:text-base text-[#5F6C7B] leading-relaxed">Cho phép người dùng đăng ký, đăng nhập vào tài khoản để lưu trữ và đồng bộ dữ liệu người dùng.</p>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination !bottom-[-30px]"></div>
+    
+            <!-- If we need navigation buttons -->
+            <div class="swiper-prev custom-nav w-10 h-10 rounded-full bg-[var(--yellow)] flex items-center justify-center cursor-pointer shadow-lg hover:scale-95 transition absolute top-1/2 -translate-y-1/2 z-20 left-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18l-6-6 6-6"
+                      stroke="white"
+                      stroke-width="5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="swiper-next custom-nav w-10 h-10 rounded-full bg-[var(--yellow)] flex items-center justify-center cursor-pointer shadow-lg hover:scale-95 transition absolute top-1/2 -translate-y-1/2 z-20 right-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M9 6l6 6-6 6"
+                      stroke="white"
+                      stroke-width="5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- ROADMAP -->
-  <section class="section card">
-
-      <h3>Lộ trình (đến 31/12/2025)</h3>
-
-      <table>
-
-        <tr><th>Thời gian</th><th>Hạng mục</th><th>Kết quả</th></tr>
-
-        <tr><td>09/2025 - 10/2025</td><td>Research</td><td>Market research, customer insight, business canvas</td></tr>
-
-        <tr><td>11/2025 - 12/2025</td><td>Project Showcase</td><td>Figma, Behance, Github Page</td></tr>
-
-        <tr><td>12/2025 - 01/2026</td><td>Phát triển MVP</td><td>APK</td></tr>
-
-      </table>
-
+    <!-- Partners Section -->
+    <section data-aos="fade-right" data-aos-delay="500" data-aos-duration="700" class="w-full flex flex-col lg:flex-row items-center justify-center space-y-11 lg:space-y-0 lg:space-x-11 py-12 mb-24">
+      <img src="assets/technologies/expo.png" class="h-[56px] lg:h-[60px] grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition duration-500" alt="">
+      <img src="assets/technologies/react.svg" class="h-[56px] lg:h-[60px] grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition duration-500" alt="">
+      <img src="assets/technologies/aspnet.png" class="h-[56px] lg:h-[60px] grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition duration-500" alt="">
+      <img src="assets/technologies/supabase.png" class="h-[56px] lg:h-[60px] grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition duration-500" alt="">
+      <img src="assets/technologies/DuckDuckGo.png" class="h-[56px] lg:h-[60px] grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition duration-500" alt="">
+      <img src="assets/technologies/fastapi.webp" class="h-[56px] lg:h-[60px] grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition duration-500" alt="">
     </section>
-
-
-    <!-- LINKS / CONTACT -->
-    <section id="download" class="section grid cols-2">
-      <div class="card">
-        <h3>Liên kết quan trọng</h3>
-        <ul class="link-a" data-slot="links.items"></ul>
+    <!-- Footer Section -->
+    <section data-aos="fade-down">
+      <div class="py-12 grid grid-cols-6 lg:grid-cols-10 gap-y-8 lg:gap-y-0 lg:gap-x-8">
+        <div class="col-span-6 space-y-4">
+          <h5 class="text-xl font-bold text-[var(--green)]">AI Travel</h5>
+          <iframe src="https://www.behance.net/embed/project/239028291?ilo0=1" height="316" width="704" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="col-span-6 sm:col-span-2">
+          <h6 class="text-[var(--green)] text-sm font-bold uppercase tracking-wide mb-5">About us</h6>
+          <ul class="space-y-2">
+            <li>
+              <a href="https://github.com/HCMUT-SHORT" class="text-[#5F6C7B] hover:text-[var(--darkblue)] transition duration-300">Github</a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/gallery/239028291/AI-Travel" class="text-[#5F6C7B] hover:text-[var(--darkblue)] transition duration-300">Behance</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-6 sm:col-span-2">
+          <h6 class="text-[var(--green)] text-sm font-bold uppercase tracking-wide mb-5">Thành viên</h6>
+          <ul class="space-y-2">
+            <li>
+              <div class="text-[#5F6C7B] hover:text-[var(--darkblue)] transition duration-300">Đoàn Lê Vy</div>
+            </li>
+            <li>
+              <div class="text-[#5F6C7B] hover:text-[var(--darkblue)] transition duration-300">Huỳnh Ngọc Nhơn</div>
+            </li>
+            <li>
+              <div class="text-[#5F6C7B] hover:text-[var(--darkblue)] transition duration-300">Đỗ Mỹ Quyên</div>
+            </li>
+            <li>
+              <div class="text-[#5F6C7B] hover:text-[var(--darkblue)] transition duration-300">Phó Ngọc Song Khuê</div>
+            </li>
+          </ul>
+        </div>        
       </div>
-      <div id="contact" class="card">
-        <h3>Liên hệ</h3>
-        <p data-slot="contact.primary"></p>
-        <p class="muted" data-slot="footer.note"></p>
+      <div class="py-12 border-t border-[rgba(144,180,206,0.25)] text-center text-sm font-bold tracking-wide uppercase text-[#5F6C7B]">
+        COPYRIGHT © 2025 — HCMUT-SHORT
       </div>
     </section>
   </main>
 
-  <!-- ======= CONFIG =======
-       Cách dùng:
-       1) Sửa JSON dưới đây cho dự án của bạn (không cần build step).
-       2) Hoặc đổi sang src="config.json" bằng cách thay innerText = fetch(...).
-  -->
-  <script id="config" type="application/json">
-  {
-    "meta": { "title": "AI TRAVEL — Showcase" },
-    "brand": { "name": "AI TRAVEL", "logo": "assets/background.jpg" },
-    "nav": {
-      "buttons": [
-        {"label": "Tính năng", "href": "#features"},
-        {"label": "Ảnh & Video", "href": "#screens"},
-        {"label": "GitHub Repo", "href": "https://github.com/your-org/your-repo", "target": "_blank", "variant": "primary"}
-      ]
-    },
-    "hero": {
-      "badges": ["React Native","Gemini AI"],
-      "title": "Ải gì khó có AI Travel lo",
-      "lead": "Ứng dụng nhằm giúp người dùng giải quyết những vấn đề thường gặp trong việc lên kế hoạch du lịch tự túc",
-      "kpis": ["🎯 Mục tiêu: MVP 01/2026", "📈 MAU mục tiêu: 50"],
-      "cta": [
-        {"label":"Tải APK (demo)","href":"#download","variant":"primary"},
-        {"label":"Liên hệ nhóm","href":"#contact"}
-      ],
-      "image": "assets/mockup.png"
-    },
-    "problem": { "items": ["Người dùng có nhu cầu đi du lịch tự túc nhưng gặp khó khăn trong việc lên kế hoạch, sắp xếp lịch trình và quản lý chi phí"] },
-    "solution": { "items": ["Ứng dụng cung cấp giải pháp giúp người dùng lên kế hoạch du lịch được cá nhân hoá, quản lý chi phí và tham khảo review"] },
-    "value": { "items": ["Giúp người dùng tiết kiệm thời gian tạo lịch trình du lịch, tham khảo các địa điểm tham quan"] },
-    "advantage": { "items": ["Thông tin về lịch trình được tổng hợp trên một ứng dụng.","Đề xuất địa điểm cá nhân hoá theo sở thích, mong muốn của người dùng.","Hỗ trợ quản lý chi phí tự động.","Tích hợp google review"] },
-    "customer": { "items": ["Người trẻ (18-30 tuổi) có mong muốn đi du lịch tự túc nhưng không biết lên kế hoạch hợp lí"] },
-    "metrics": {
-      "rows": [
-        ["Khoảng thời gian trung bình trong một phiên sử dụng (session length)","20–30 phút"],
-        ["Tỉ lệ hoàn tất lịch trình (chức năng tạo tour)","> 90%"],
-        ["Tỉ lệ lỗi trong suốt quá trình tạo tour","≤ 5%"],
-        ["Mức độ hài lòng với các review","> 80%"]
-      ]
-    },
-    "features": {
-      "columns": [
-        {"title":"Tạo tour","bullets":["Người dùng tạo một chuyến đi du lịch cá nhân hóa bằng cách nhập các thông tin cơ bản như điểm đến, ngày đi-về, ngân sách hoặc sở thích.","Ứng dụng sẽ sử dụng AI để đề xuất các địa điểm tham quan phù hợp với người dùng."]},
-        {"title":"Xem lịch sử","bullets":["Cho phép người dùng truy cập lại các tour đã tạo trước đây,bao gồm lịch trình, chi phí, và các ghi chú.","Cho phép người dùng chỉnh sửa hoặc tái sử dụng cho những chuyến đi tương tự trong tương lai."]},
-        {"title":"Chia sẻ tour","bullets":["Cho phép người dùng chia sẻ lịch trình gồm các địa điểm đã chọn cho người khác qua mã","Hỗ trợ quyền chỉnh sửa chung, giúp người được chia sẻ có thể cùng cập nhật và hoàn thiện tour."]}
-      ]
-    },
-    "screenshots": {
-      "items": [
-        {"src":"assets/Onboarding-start.png","alt":"Welcome"},
-        {"src":"assets/Onboarding-1.png","alt":"Sign in"},
-        {"src":"assets/Onboarding-2.png","alt":"Home"},
-        {"src":"assets/Onboarding-3.png","alt":"Chat"}
-      ]
-    },
-    "tech": { "items": ["React Native (mobile)","Supabase","Gemini AI"] },
-    "team": {
-      "members": [
-        {"name":"Đoàn Lê Vy","role":"Leader & UI/UX"},
-        {"name":"Huỳnh Ngọc Nhơn","role":"Backend & Tech Lead"},
-        {"name":"Đỗ Mỹ Quyên","role":"Backend"},
-        {"name":"Phó Ngọc Song Khuê","role":"Frontend & Testing"}
-      ]
-    },
-    "links": {
-      "items": [
-        {"label":"GitHub repo","href":"https://github.com/HCMUT-SHORT/master"},
-        {"label":"GitHub Organization","href":"https://github.com/HCMUT-SHORT"},
-        {"label":"APK demo","href":"#", "note":"WORK IN PROGRESS"}
-      ]
-    },
-    "contact": {
-      "primary": "Email: <a href='mailto:doanlevy2806@gmail.com'>doanlevy2806@gmail.com</a> — hoặc tạo Issue trên GitHub.",
-      "footerNote": "© Nhóm {group} — Mobile App."
-    }
-  }
-  </script>
-
-  <!-- ======= RUNTIME (vanilla JS, no build step) ======= -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-  (function(){
-    // Helpers
-    const $ = (sel) => document.querySelector(sel);
-    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+    AOS.init();
+    const swiper = new Swiper('.comment-slider', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 1024px
+        1024: {
+          slidesPerView: 3,
+        },
+      },
 
-    function fillText(slot, text) {
-      const el = document.querySelector(`[data-slot="${slot}"]`);
-      if (el && text != null) el.textContent = text;
-    }
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
 
-    function fillHTML(slot, html) {
-      const el = document.querySelector(`[data-slot="${slot}"]`);
-      if (el && html != null) el.innerHTML = html;
-    }
-
-    function fillImage(slot, src, alt) {
-      const el = document.querySelector(`[data-slot="${slot}"]`);
-      if (el && src) { el.src = src; if (alt) el.alt = alt; }
-    }
-
-    function listToUL(slot, items) {
-      const ul = document.querySelector(`[data-slot="${slot}"]`);
-      if (!ul || !Array.isArray(items)) return;
-      ul.innerHTML = items.map(li => `<li>${li}</li>`).join("");
-    }
-
-    function chips(slot, items) {
-      const wrap = document.querySelector(`[data-slot="${slot}"]`);
-      if (!wrap || !Array.isArray(items)) return;
-      wrap.innerHTML = items.map(t => `<div class="chip">${t}</div>`).join("");
-    }
-
-    function badges(slot, items) {
-      const wrap = document.querySelector(`[data-slot="${slot}"]`);
-      if (!wrap || !Array.isArray(items)) return;
-      wrap.innerHTML = items.map(t => `<span class="badge">${t}</span>`).join("");
-    }
-
-    function tableRows(slot, rows) {
-      const tbody = document.querySelector(`[data-slot="${slot}"]`);
-      if (!tbody || !Array.isArray(rows)) return;
-      tbody.innerHTML = rows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("");
-    }
-
-    function featuresCols(slot, cols) {
-      const grid = document.querySelector(`[data-slot="${slot}"]`);
-      if (!grid || !Array.isArray(cols)) return;
-      grid.innerHTML = cols.map(c => `
-        <div>
-          <p class="pill">${c.title ?? ""}</p>
-          <ul>${(c.bullets||[]).map(b=>`<li>${b}</li>`).join("")}</ul>
-        </div>
-      `).join("");
-    }
-
-    function screenshots(slot, items) {
-      const grid = document.querySelector(`[data-slot="${slot}"]`);
-      if (!grid || !Array.isArray(items)) return;
-      grid.innerHTML = items.map(i => `<img src="${i.src}" alt="${i.alt||""}" class="media">`).join("");
-    }
-
-    function links(slot, items) {
-      const ul = document.querySelector(`[data-slot="${slot}"]`);
-      if (!ul || !Array.isArray(items)) return;
-      ul.innerHTML = items.map(i => {
-        const note = i.note ? ` — <span class="muted">${i.note}</span>` : "";
-        return `<li>${i.label}: <a href="${i.href}" target="_blank" rel="noopener">${i.href}</a>${note}</li>`;
-      }).join("");
-    }
-
-    function team(slot, members) {
-      const ul = document.querySelector(`[data-slot="${slot}"]`);
-      if (!ul || !Array.isArray(members)) return;
-      ul.innerHTML = members.map(m => `<li><b>${m.name}</b> — ${m.role || ""}</li>`).join("");
-    }
-
-    function navButtons(slot, buttons) {
-      const wrap = document.querySelector(`[data-slot="${slot}"]`);
-      if (!wrap || !Array.isArray(buttons)) return;
-      wrap.innerHTML = buttons.map(b => {
-        const cls = `btn ${b.variant === 'primary' ? 'primary' : ''}`;
-        const tgt = b.target ? ` target="${b.target}" rel="noopener"` : "";
-        return `<a class="${cls}" href="${b.href}"${tgt}>${b.label}</a>`;
-      }).join("");
-    }
-
-    // Read config JSON (inline). If you want to fetch external config.json, replace below.
-    let cfg = {};
-    try { cfg = JSON.parse(document.getElementById('config').textContent); }
-    catch(e){ console.warn("Config JSON invalid", e); cfg = {}; }
-
-    // THEME (optional) via cfg.theme
-    if (cfg.theme && typeof cfg.theme === 'object') {
-      const root = document.documentElement;
-      Object.entries(cfg.theme).forEach(([k,v]) => root.style.setProperty(k, v));
-    }
-
-    // META & BRAND
-    if (cfg.meta?.title) { document.title = cfg.meta.title; fillText("meta.title", cfg.meta.title); }
-    fillText("brand.name", cfg.brand?.name || "ProjectName");
-    if (cfg.brand?.logo) { document.querySelector('[data-slot="brand.logo"]').style.backgroundImage = `url('${cfg.brand.logo}')`; }
-
-    // NAV
-    navButtons("nav.cta", cfg.nav?.buttons || []);
-
-    // HERO
-    badges("hero.badges", cfg.hero?.badges || []);
-    fillText("hero.title", cfg.hero?.title || "Tiêu đề dự án");
-    fillText("hero.lead", cfg.hero?.lead || "");
-    chips("hero.kpis", cfg.hero?.kpis || []);
-    navButtons("hero.cta", cfg.hero?.cta || []);
-    fillImage("hero.image", cfg.hero?.image || "", "App mockup");
-
-    // SECTIONS
-    listToUL("problem.items", cfg.problem?.items || []);
-    listToUL("solution.items", cfg.solution?.items || []);
-    listToUL("value.items", cfg.value?.items || []);
-    listToUL("advantage.items", cfg.advantage?.items || []);
-    listToUL("customer.items", cfg.customer?.items || []);
-    tableRows("metrics.rows", cfg.metrics?.rows || []);
-    featuresCols("features.columns", cfg.features?.columns || []);
-    screenshots("screenshots.grid", cfg.screenshots?.items || []);
-    listToUL("tech.items", cfg.tech?.items || []);
-    team("team.members", cfg.team?.members || []);
-    tableRows("roadmap.rows", cfg.roadmap?.rows || []);
-    links("links.items", cfg.links?.items || []);
-    fillHTML("contact.primary", cfg.contact?.primary || "");
-    fillText("footer.note", (cfg.contact?.footerNote || "").replace("{group}", cfg.brand?.name || "Nhóm"));
-  })();
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+    });
   </script>
 </body>
 </html>
