@@ -58,7 +58,7 @@
       <div data-aos="fade-left" data-aos-duration="700" class="py-10 px-9 text-center bg-[var(--mint)] rounded-r-2xl lg:text-left">
         <!-- <span class="mb-4 text-[#3DA9FC] inline-block font-semibold leading-tight">Booking Penginapan</span> -->
         <h2 class="mb-4 text-3xl md:text-4xl text-[var(--darkblue)] font-extrabold leading-tight pr-0">Đừng lo, việc gì khó đã có AI Travel lo! 👍🏻</h2>
-        <ul class="mb-8 text-base md:text-lg tracking-wide leading-8 font-semibold text-black pr-0 xl:pr-24 list-disc list-inside">
+        <ul class="mb-8 text-base md:text-lg tracking-wide leading-8 font-semibold text-black pr-0 xl:pr-20 list-disc list-inside">
             <li>AI tạo lịch trình tự động</li>
             <li>Tổng hợp review đáng tin cậy</li>
             <li>Công cụ quản lý chi phí thông minh</li>
@@ -246,5 +246,22 @@
       },
     });
   </script>
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    window.addEventListener('load', () => {
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    });
+  </script>
+
 </body>
 </html>
