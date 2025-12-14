@@ -58,13 +58,14 @@
       <div data-aos="fade-left" data-aos-duration="700" class="py-10 px-9 text-center bg-[var(--mint)] rounded-r-2xl lg:text-left">
         <!-- <span class="mb-4 text-[#3DA9FC] inline-block font-semibold leading-tight">Booking Penginapan</span> -->
         <h2 class="mb-4 text-3xl md:text-4xl text-[var(--darkblue)] font-extrabold leading-tight pr-0">Đừng lo, việc gì khó đã có AI Travel lo! 👍🏻</h2>
-        <ul class="mb-8 text-base md:text-lg tracking-wide leading-8 font-semibold text-black pr-0 xl:pr-20 list-disc list-inside">
-            <li>AI tạo lịch trình tự động</li>
-            <li>Tổng hợp review đáng tin cậy</li>
-            <li>Công cụ quản lý chi phí thông minh</li>
-            <li>Kho thông tin du lịch tập trung</li>
-            <li>Giao diện tối giản - thao tác nhanh</li>
-            <li>Chia sẻ tour dễ dàng</li>
+        <ul class="mb-8 text-base md:text-lg tracking-wide leading-8 font-semibold text-black pr-0 xl:pr-20 list-disc list-outside pl-6">
+          <li>Phù hợp cho người trẻ yêu thích trải nghiệm tự túc từ 18-30 tuổi</li>
+          <li>AI tạo lịch trình tự động</li>
+          <li>Tổng hợp review đáng tin cậy</li>
+          <li>Công cụ quản lý chi phí thông minh</li>
+          <li>Kho thông tin du lịch tập trung</li>
+          <li>Giao diện tối giản - thao tác nhanh</li>
+          <li>Chia sẻ tour dễ dàng</li>
         </ul>
       </div>
     </section>
@@ -73,6 +74,24 @@
       <span class="text-[var(--lightgreen)] inline-block font-semibold leading-tight mb-4">Khám phá</span>
       <div class="flex items-center justify-between mb-8 lg:mb-5">
         <h3 class="text-4xl text-[var(--green)] font-extrabold leading-tight w-full lg:w-fit">Giao diện ứng dụng</h3>
+        <a
+          href="https://www.figma.com/design/OizrTAkv7p0gVHLlJm9QMG/-MOBILE-APP--AI-TRAVEL?m=auto&t=6cViJp8FJgFcbHoi-6"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden font-semibold text-[var(--green)] leading-tight lg:flex items-center space-x-2 hover:opacity-70 transition"
+        >
+          <span>Figma</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M9 6l6 6-6 6"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+
       </div>
       <div class="grid grid-cols-4 lg:grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-12 mb-8">
         <div class="col-span-4 flex flex-col items-center justify-center rounded-xl hover:scale-105 transition duration-300 cursor-pointer">
@@ -189,6 +208,9 @@
             <li>
               <a href="https://www.behance.net/gallery/239028291/AI-Travel" class="text-[#5F6C7B] hover:text-[var(--darkblue)] transition duration-300">Behance</a>
             </li>
+            <li>
+              <a href="https://www.figma.com/design/OizrTAkv7p0gVHLlJm9QMG/-MOBILE-APP--AI-TRAVEL?m=auto&t=6cViJp8FJgFcbHoi-6" class="text-[#5F6C7B] hover:text-[var(--darkblue)] transition duration-300">Figma</a>
+            </li>
           </ul>
         </div>
         <div class="col-span-6 sm:col-span-2">
@@ -220,7 +242,6 @@
   <script>
     AOS.init();
     const swiper = new Swiper('.comment-slider', {
-      // Optional parameters
       loop: true,
       slidesPerView: 1,
       spaceBetween: 30,
@@ -234,12 +255,10 @@
         },
       },
 
-      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
       },
 
-      // Navigation arrows
       navigation: {
         nextEl: '.swiper-next',
         prevEl: '.swiper-prev',
